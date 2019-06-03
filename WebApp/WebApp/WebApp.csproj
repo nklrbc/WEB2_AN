@@ -259,6 +259,14 @@
     <Compile Include="Migrations\201905222056072_InitialMigration.Designer.cs">
       <DependentUpon>201905222056072_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906031011562_PrvaMigracija.cs" />
+    <Compile Include="Migrations\201906031011562_PrvaMigracija.Designer.cs">
+      <DependentUpon>201906031011562_PrvaMigracija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906031018432_DrugaMigracija.cs" />
+    <Compile Include="Migrations\201906031018432_DrugaMigracija.Designer.cs">
+      <DependentUpon>201906031018432_DrugaMigracija.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -372,6 +380,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201905222056072_InitialMigration.resx">
       <DependentUpon>201905222056072_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906031011562_PrvaMigracija.resx">
+      <DependentUpon>201906031011562_PrvaMigracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906031018432_DrugaMigracija.resx">
+      <DependentUpon>201906031018432_DrugaMigracija.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

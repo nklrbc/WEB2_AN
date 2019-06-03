@@ -7,12 +7,12 @@ namespace WebApp.Models
 {
     public class Karta
     {
-        private TipKarte tipKarte;
         private int id;
+        private TipKarte tipKarte;
         private DateTime trajanjeKarte;
 
-        public TipKarte TipKarte { get => tipKarte; set => tipKarte = value; }
         public int Id { get => id; set => id = value; }
+        public TipKarte TipKarte { get => tipKarte; set => tipKarte = value; }   
         public DateTime TrajanjeKarte { get => trajanjeKarte; set => trajanjeKarte = value; }
 
         public Karta(TipKarte _tipKarte, int _id)
