@@ -1,0 +1,20 @@
+<h1>BUS APLIKACIJA</h1>
+
+<nav>
+  <br>
+  <a (click)="toggleEditor('redVoznje')"><h2>Red voznje</h2></a>
+  <br>
+  <a (click)="toggleEditor('cenovnik')"><h2>Cenovnik</h2></a>
+
+  <div class="absolute">
+    <a (click)="toggleEditor('login')"><h2>Login</h2></a>
+  </div>
+  
+</nav>
+
+<app-red-voznje *ngIf="showRedVoznje"></app-red-voznje>
+
+<app-cenovnik *ngIf="showCenovnik"></app-cenovnik>
+
+<app-login *ngIf="showLogin"></app-login>
+
