@@ -26,7 +26,7 @@ namespace WebApp.Controllers
         }
 
 
-        // GET: api/Cenovniks
+        // GET: api/Cenovnik/Cenovnik
         public IEnumerable<ArhivaCenovnikaBindingModel> GetCenovnik()
         {
             List<ArhivaCenovnikaBindingModel> acbm = new List<ArhivaCenovnikaBindingModel>();

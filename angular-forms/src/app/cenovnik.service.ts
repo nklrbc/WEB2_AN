@@ -1,20 +1,22 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-
+import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { catchError, map ,} from 'rxjs/operators';
 import { ArhivaCenovnika } from './arhivaCenovnika';
+import { catchError } from 'rxjs/operators';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
 @Injectable({ providedIn: 'root' })
-export class BusService {
+export class CenovnikService {
 
-  private ceneUrl = 'api/cenovniks';  // URL to web api
+  private ceneUrl = 'http://localhost:52295/api/Cenovnik/Cenovnik';  // URL to web api
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) 
+  {
+    console.log("usao u konstruktor");
+  }
 
   /** GET heroes from the server */
   getCenovnik (): Observable<ArhivaCenovnika[]> {

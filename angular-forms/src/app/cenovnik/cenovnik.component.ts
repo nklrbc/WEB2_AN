@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BusService } from '../cenovnik.service';
+import { CenovnikService } from '../cenovnik.service';
 import { ArhivaCenovnika } from '../arhivaCenovnika';
 
 @Component({
@@ -9,17 +9,17 @@ import { ArhivaCenovnika } from '../arhivaCenovnika';
 })
 export class CenovnikComponent implements OnInit {
 
-  cene : ArhivaCenovnika[];
+  ArhivaCenovnikas : ArhivaCenovnika[];
 
-  constructor(private busService: BusService) { }
+  constructor(private cenovnikService: CenovnikService) { }
 
   ngOnInit() {
     this.getCenovnik();
   }
 
   getCenovnik(): void {
-    this.busService.getCenovnik()
-    .subscribe(cene => this.cene = cene);
+    this.cenovnikService.getCenovnik()
+    .subscribe(ArhivaCenovnikas => this.ArhivaCenovnikas = ArhivaCenovnikas);
   }
 
 }

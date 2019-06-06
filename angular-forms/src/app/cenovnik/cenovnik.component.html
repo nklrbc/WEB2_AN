@@ -1,16 +1,7 @@
 <div class="absolute">
-
   <Table border="1">
-
-    <tr>
-        <th>Tip karte</th>
-        <th>Cena</th>
-    </tr>
-    
-
-
+      <tr><th>Tip karte</th><th>Cena</th></tr>
+      <tr *ngFor="let ArhivaCenovnika of ArhivaCenovnikas"><td>{{ArhivaCenovnika.Tip}}</td><td>{{ArhivaCenovnika.Cena}}</td></tr>
   </Table>
-  
-    
 </div>
 

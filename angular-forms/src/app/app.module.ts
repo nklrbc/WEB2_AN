@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { HttpClientModule }    from '@angular/common/http';
 import { AppComponent } from './app.component';
 
 import { LoginComponent } from './login/login.component';
@@ -11,7 +11,6 @@ import { CenovnikComponent } from './cenovnik/cenovnik.component';
 @NgModule({
   declarations: [
     AppComponent,
-
     LoginComponent,
     RedVoznjeComponent,
     CenovnikComponent,
@@ -19,7 +18,8 @@ import { CenovnikComponent } from './cenovnik/cenovnik.component';
   imports: [
     BrowserModule,
     // other imports ...
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
