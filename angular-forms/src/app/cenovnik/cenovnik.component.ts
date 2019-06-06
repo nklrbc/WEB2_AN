@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BusService } from '../cenovnik.service';
+import { ArhivaCenovnika } from '../arhivaCenovnika';
 
 @Component({
   selector: 'app-cenovnik',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CenovnikComponent implements OnInit {
 
-  constructor() { }
+  cene : ArhivaCenovnika[];
+
+  constructor(private busService: BusService) { }
 
   ngOnInit() {
+    this.getCenovnik();
+  }
+
+  getCenovnik(): void {
+    this.busService.getCenovnik()
+    .subscribe(cene => this.cene = cene);
   }
 
 }

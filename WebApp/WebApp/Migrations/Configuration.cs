@@ -21,7 +21,8 @@ namespace WebApp.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
-
+      
+           
             if (!context.Roles.Any(r => r.Name == "Admin"))
             {
                 var store = new RoleStore<IdentityRole>(context);
@@ -65,6 +66,24 @@ namespace WebApp.Migrations
                 userManager.Create(user);
                 userManager.AddToRole(user.Id, "AppUser");
             }
+
+
+           /* var vremenska = new ArhivaCenovnika() { Id = 0, From = DateTime.Now, To = new DateTime(2019, 7, 5, 12, 0, 0), Tip = TipKarte.Vremenska, Cena = 65 };
+            context.ArhivaCenovnikas.Add(vremenska);
+            context.SaveChanges();
+
+            var dnevna = new ArhivaCenovnika() { Id = 1, From = DateTime.Now, To = new DateTime(2019, 7, 5, 12, 0, 0), Tip = TipKarte.Dnevna, Cena = 300 };
+            context.ArhivaCenovnikas.Add(dnevna);
+            context.SaveChanges();
+
+            var mesecna = new ArhivaCenovnika() { Id = 2, From = DateTime.Now, To = new DateTime(2019, 7, 5, 12, 0, 0), Tip = TipKarte.Mesecna, Cena = 1000 };
+            context.ArhivaCenovnikas.Add(mesecna);
+            context.SaveChanges();
+
+            var godisnja = new ArhivaCenovnika() { Id = 3, From = DateTime.Now, To = new DateTime(2019, 7, 5, 12, 0, 0), Tip = TipKarte.Godisnja, Cena = 12000 };
+            context.ArhivaCenovnikas.Add(godisnja);
+            context.SaveChanges();
+            */
         }
     }
 }

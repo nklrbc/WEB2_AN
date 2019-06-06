@@ -250,6 +250,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CenovnikController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -267,15 +268,41 @@
     <Compile Include="Migrations\201906031018432_DrugaMigracija.Designer.cs">
       <DependentUpon>201906031018432_DrugaMigracija.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906050802436_TrecaMigracija.cs" />
+    <Compile Include="Migrations\201906050802436_TrecaMigracija.Designer.cs">
+      <DependentUpon>201906050802436_TrecaMigracija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906050838530_CetvrtaMigracija.cs" />
+    <Compile Include="Migrations\201906050838530_CetvrtaMigracija.Designer.cs">
+      <DependentUpon>201906050838530_CetvrtaMigracija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906050842279_PetaMigracija.cs" />
+    <Compile Include="Migrations\201906050842279_PetaMigracija.Designer.cs">
+      <DependentUpon>201906050842279_PetaMigracija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906050927443_check.cs" />
+    <Compile Include="Migrations\201906050927443_check.Designer.cs">
+      <DependentUpon>201906050927443_check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906050937355_check2.cs" />
+    <Compile Include="Migrations\201906050937355_check2.Designer.cs">
+      <DependentUpon>201906050937355_check2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\ArhivaCenovnika.cs" />
+    <Compile Include="Models\ArhivaCenovnikaBindingModel.cs" />
     <Compile Include="Models\Karta.cs" />
     <Compile Include="Models\Linija.cs" />
+    <Compile Include="Models\Popust.cs" />
     <Compile Include="Models\Stanica.cs" />
     <Compile Include="Models\TipKarte.cs" />
+    <Compile Include="Models\TipRegistrovanogKorisnika.cs" />
     <Compile Include="Persistence\ApplicationDbContext.cs" />
+    <Compile Include="Persistence\Repository\CenovnikRepository.cs" />
+    <Compile Include="Persistence\Repository\ICenovnikRepository.cs" />
     <Compile Include="Persistence\Repository\IRepository.cs" />
     <Compile Include="Persistence\Repository\Repository.cs" />
     <Compile Include="Persistence\UnitOfWork\DemoUnitOfWork.cs" />
@@ -386,6 +413,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201906031018432_DrugaMigracija.resx">
       <DependentUpon>201906031018432_DrugaMigracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906050802436_TrecaMigracija.resx">
+      <DependentUpon>201906050802436_TrecaMigracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906050838530_CetvrtaMigracija.resx">
+      <DependentUpon>201906050838530_CetvrtaMigracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906050842279_PetaMigracija.resx">
+      <DependentUpon>201906050842279_PetaMigracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906050927443_check.resx">
+      <DependentUpon>201906050927443_check.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906050937355_check2.resx">
+      <DependentUpon>201906050937355_check2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
