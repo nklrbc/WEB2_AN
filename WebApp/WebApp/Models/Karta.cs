@@ -15,10 +15,9 @@ namespace WebApp.Models
         public TipKarte TipKarte { get => tipKarte; set => tipKarte = value; }   
         public DateTime TrajanjeKarte { get => trajanjeKarte; set => trajanjeKarte = value; }
 
-        public Karta(TipKarte _tipKarte, int _id)
+        public Karta(TipKarte _tipKarte)
         {
             this.TipKarte = _tipKarte;
-            this.Id = _id;
 
             if (TipKarte == TipKarte.Vremenska)
             {

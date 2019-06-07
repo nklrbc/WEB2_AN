@@ -68,7 +68,7 @@ namespace WebApp.Migrations
             }
 
 
-           /* var vremenska = new ArhivaCenovnika() { Id = 0, From = DateTime.Now, To = new DateTime(2019, 7, 5, 12, 0, 0), Tip = TipKarte.Vremenska, Cena = 65 };
+            /*var vremenska = new ArhivaCenovnika() { Id = 0, From = DateTime.Now, To = new DateTime(2019, 7, 5, 12, 0, 0), Tip = TipKarte.Vremenska, Cena = 65 };
             context.ArhivaCenovnikas.Add(vremenska);
             context.SaveChanges();
 

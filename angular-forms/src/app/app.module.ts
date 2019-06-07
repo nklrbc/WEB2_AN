@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RedVoznjeComponent } from './red-voznje/red-voznje.component';
 import { CenovnikComponent } from './cenovnik/cenovnik.component';
+import { KupovinaKarteComponent } from './kupovina-karte/kupovina-karte.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { CenovnikComponent } from './cenovnik/cenovnik.component';
     LoginComponent,
     RedVoznjeComponent,
     CenovnikComponent,
+    KupovinaKarteComponent,
   ],
   imports: [
     BrowserModule,

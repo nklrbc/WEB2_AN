@@ -14,6 +14,8 @@ namespace WebApp.Persistence.UnitOfWork
 
         [Dependency]
         public ICenovnikRepository Cenovnik { get; set; }
+        [Dependency]
+        public IKupovinaKarteRepository KupovinaKarte { get; set; }
 
 
         public DemoUnitOfWork(DbContext context)

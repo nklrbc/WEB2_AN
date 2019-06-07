@@ -5,10 +5,14 @@
   <a (click)="toggleEditor('redVoznje')"><h2>Red voznje</h2></a>
   <br>
   <a (click)="toggleEditor('cenovnik')"><h2>Cenovnik</h2></a>
+  <br>
+  <a (click)="toggleEditor('kupovinaKarte')"><h2>Kupi kartu</h2></a>
 
   <div class="absolute">
     <a (click)="toggleEditor('login')"><h2>Login</h2></a>
   </div>
+
+
   
 </nav>
 
@@ -17,4 +21,6 @@
 <app-cenovnik *ngIf="showCenovnik"></app-cenovnik>
 
 <app-login *ngIf="showLogin"></app-login>
+
+<app-kupovina-karte *ngIf="showKupovina"></app-kupovina-karte>
 

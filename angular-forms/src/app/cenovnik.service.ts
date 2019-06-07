@@ -18,17 +18,12 @@ export class CenovnikService {
     console.log("usao u konstruktor");
   }
 
-  /** GET heroes from the server */
   getCenovnik (): Observable<ArhivaCenovnika[]> {
     return this.http.get<ArhivaCenovnika[]>(this.ceneUrl)
       .pipe(
         catchError(this.handleError<ArhivaCenovnika[]>('getCenovnik', []))
       );
   }
-
-  
-
-  //////// Save methods //////////
 
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
