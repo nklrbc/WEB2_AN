@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { RedVoznjeService } from '../red-voznje.service';
+
+export type EditorType = 'linijaDetalji'
 
 @Component({
   selector: 'app-red-voznje',
@@ -7,7 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RedVoznjeComponent  {
 
-  constructor() { }
+  Linije : string[];
 
+  constructor(private redVoznjeService: RedVoznjeService) { }
 
+  ngOnInit() {
+    this.getLinije();
+  }
+
+  getLinije(): void {
+    this.redVoznjeService.getLinije()
+    .subscribe(Linije => this.Linije = Linije);
+  }
+
+  editor: EditorType = 'linijaDetalji';
+
+  get showLinijaDetalji() {
+    return this.editor === 'linijaDetalji';
+  }
+
+  toggleEditor(type: EditorType) {
+    this.editor = type;
+  }
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-export type EditorType = 'redVoznje' | 'cenovnik' | 'login' | 'kupovinaKarte';
+export type EditorType = 'redVoznje' | 'cenovnik' | 'login' | 'kupovinaKarte' | 'linijaDetalji';
 
 @Component({
   selector: 'app-root',
@@ -26,6 +26,9 @@ export class AppComponent {
     return this.editor === 'kupovinaKarte';
   }
 
+  get showLinijaDetalji() {
+    return this.editor === 'linijaDetalji';
+  }
 
   toggleEditor(type: EditorType) {
     this.editor = type;

@@ -8,6 +8,8 @@ import { LoginComponent } from './login/login.component';
 import { RedVoznjeComponent } from './red-voznje/red-voznje.component';
 import { CenovnikComponent } from './cenovnik/cenovnik.component';
 import { KupovinaKarteComponent } from './kupovina-karte/kupovina-karte.component';
+import { LinijaDetaljiComponent } from './linija-detalji/linija-detalji.component';
+
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { KupovinaKarteComponent } from './kupovina-karte/kupovina-karte.componen
     RedVoznjeComponent,
     CenovnikComponent,
     KupovinaKarteComponent,
+    LinijaDetaljiComponent,
+
   ],
   imports: [
     BrowserModule,

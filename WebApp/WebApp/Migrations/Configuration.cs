@@ -3,6 +3,7 @@ namespace WebApp.Migrations
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -84,6 +85,50 @@ namespace WebApp.Migrations
             context.ArhivaCenovnikas.Add(godisnja);
             context.SaveChanges();
             */
+
+            /*List<string> vremena1 = new List<string>();
+            vremena1.Add("8:40");
+            vremena1.Add("9:50");
+            vremena1.Add("12:00");
+            vremena1.Add("13:50");
+            vremena1.Add("14:30");
+            vremena1.Add("15:50");
+            var linija1 = new Linija(2, "Trojka", vremena1);
+
+            var stanica1 = new Stanica(0, "Zeleznica stanica");
+            var stanica2 = new Stanica(1, "Safarikova");
+            var stanica3 = new Stanica(2, "Brace Ribnikar");
+            var stanica4 = new Stanica(3, "Merkator");
+            var stanica5 = new Stanica(4, "Most Slobode");
+            var stanica6 = new Stanica(5, "Sremska Kamenica"); 
+
+            stanica1.Linije.Add(linija1);
+            stanica2.Linije.Add(linija1);
+            stanica3.Linije.Add(linija1);
+            stanica4.Linije.Add(linija1);
+            stanica5.Linije.Add(linija1);
+            stanica6.Linije.Add(linija1);
+
+            linija1.Stanice.Add(stanica1);
+            linija1.Stanice.Add(stanica2);
+            linija1.Stanice.Add(stanica3);
+            linija1.Stanice.Add(stanica4);
+            linija1.Stanice.Add(stanica5);
+            linija1.Stanice.Add(stanica6);
+
+
+            context.Stanicas.Add(stanica3);
+            context.Stanicas.Add(stanica4);
+            context.Stanicas.Add(stanica5);
+            context.Stanicas.Add(stanica6);
+
+            context.Linijas.Add(linija1);
+
+
+            context.Linijas.Add(linija1);
+
+            context.SaveChanges();*/
+
         }
     }
 }

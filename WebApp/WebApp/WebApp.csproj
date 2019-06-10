@@ -253,6 +253,8 @@
     <Compile Include="Controllers\CenovnikController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KupovinakarteController.cs" />
+    <Compile Include="Controllers\LinijaDetaljiController.cs" />
+    <Compile Include="Controllers\RedVoznjeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -289,6 +291,10 @@
     <Compile Include="Migrations\201906050937355_check2.Designer.cs">
       <DependentUpon>201906050937355_check2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906100651365_SestaMigracija.cs" />
+    <Compile Include="Migrations\201906100651365_SestaMigracija.Designer.cs">
+      <DependentUpon>201906100651365_SestaMigracija.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -298,16 +304,22 @@
     <Compile Include="Models\Karta.cs" />
     <Compile Include="Models\Linija.cs" />
     <Compile Include="Models\Popust.cs" />
+    <Compile Include="Models\LinijeDetaljiBindingModel.cs" />
     <Compile Include="Models\Stanica.cs" />
+    <Compile Include="Models\StanicaLinijas.cs" />
     <Compile Include="Models\TipKarte.cs" />
     <Compile Include="Models\TipRegistrovanogKorisnika.cs" />
     <Compile Include="Persistence\ApplicationDbContext.cs" />
     <Compile Include="Persistence\Repository\CenovnikRepository.cs" />
     <Compile Include="Persistence\Repository\ICenovnikRepository.cs" />
     <Compile Include="Persistence\Repository\IKupovinaKarteRepository.cs" />
+    <Compile Include="Persistence\Repository\ILinijeRepository.cs" />
     <Compile Include="Persistence\Repository\IRepository.cs" />
+    <Compile Include="Persistence\Repository\IStaniceRepository.cs" />
     <Compile Include="Persistence\Repository\KupovinaKarteRepository.cs" />
+    <Compile Include="Persistence\Repository\LinijeRepository.cs" />
     <Compile Include="Persistence\Repository\Repository.cs" />
+    <Compile Include="Persistence\Repository\StaniceRepository.cs" />
     <Compile Include="Persistence\UnitOfWork\DemoUnitOfWork.cs" />
     <Compile Include="Persistence\UnitOfWork\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -431,6 +443,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201906050937355_check2.resx">
       <DependentUpon>201906050937355_check2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906100651365_SestaMigracija.resx">
+      <DependentUpon>201906100651365_SestaMigracija.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
