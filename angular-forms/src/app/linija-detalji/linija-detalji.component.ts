@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { LinijaDetaljiService } from '../linija-detalji.service';
 import { LinijaDetalji } from '../linijeDetalji';
 
@@ -9,17 +9,20 @@ import { LinijaDetalji } from '../linijeDetalji';
 })
 export class LinijaDetaljiComponent implements OnInit {
 
-  nazivLinije : string;
-  linijaDetalji : LinijaDetalji;
+  @Input() nazivLinije : string;
+
+  linijaDetalji : LinijaDetalji = new LinijaDetalji()
+
 
   constructor(private linijeDetalji: LinijaDetaljiService) { }
 
   ngOnInit() {
+    console.log(this.nazivLinije)
     this.getLinijeDetalji();
   }
 
   getLinijeDetalji(): void {
-    this.linijeDetalji.getDetalji(this.nazivLinije)
+    this.linijeDetalji.getDetaljiMock(this.nazivLinije)
     .subscribe(linijaDetalji => this.linijaDetalji = linijaDetalji);
   }
 

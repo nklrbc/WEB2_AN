@@ -24,9 +24,9 @@ namespace WebApp.Controllers
             _unitOfWork = unitofWork;
         }
 
-        // GET: api/RedVoznje/Detalji
+        // GET: api/LinijaDetalji/Detalji/{nazivlinije}
         [HttpGet]
-        public LinijeDetaljiBindingModel GetDetalji([FromBody]string nazivLinije)
+        public LinijeDetaljiBindingModel GetDetalji([FromUri]string nazivLinije)
         {
             LinijeDetaljiBindingModel ldbm = new LinijeDetaljiBindingModel();
             List<string> stanice = new List<string>();

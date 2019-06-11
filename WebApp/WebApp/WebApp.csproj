@@ -255,6 +255,7 @@
     <Compile Include="Controllers\KupovinakarteController.cs" />
     <Compile Include="Controllers\LinijaDetaljiController.cs" />
     <Compile Include="Controllers\RedVoznjeController.cs" />
+    <Compile Include="Controllers\RegistracijaController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -295,6 +296,10 @@
     <Compile Include="Migrations\201906100651365_SestaMigracija.Designer.cs">
       <DependentUpon>201906100651365_SestaMigracija.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906111018432_Registracija.cs" />
+    <Compile Include="Migrations\201906111018432_Registracija.Designer.cs">
+      <DependentUpon>201906111018432_Registracija.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -310,7 +315,9 @@
     <Compile Include="Models\TipKarte.cs" />
     <Compile Include="Models\TipRegistrovanogKorisnika.cs" />
     <Compile Include="Persistence\ApplicationDbContext.cs" />
+    <Compile Include="Persistence\Repository\ApplicationUserRepository.cs" />
     <Compile Include="Persistence\Repository\CenovnikRepository.cs" />
+    <Compile Include="Persistence\Repository\IApplicationUserRepository.cs" />
     <Compile Include="Persistence\Repository\ICenovnikRepository.cs" />
     <Compile Include="Persistence\Repository\IKupovinaKarteRepository.cs" />
     <Compile Include="Persistence\Repository\ILinijeRepository.cs" />
@@ -446,6 +453,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201906100651365_SestaMigracija.resx">
       <DependentUpon>201906100651365_SestaMigracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906111018432_Registracija.resx">
+      <DependentUpon>201906111018432_Registracija.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -9,6 +9,7 @@ import { RedVoznjeComponent } from './red-voznje/red-voznje.component';
 import { CenovnikComponent } from './cenovnik/cenovnik.component';
 import { KupovinaKarteComponent } from './kupovina-karte/kupovina-karte.component';
 import { LinijaDetaljiComponent } from './linija-detalji/linija-detalji.component';
+import { RegistracijaComponent } from './registracija/registracija.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { LinijaDetaljiComponent } from './linija-detalji/linija-detalji.componen
     CenovnikComponent,
     KupovinaKarteComponent,
     LinijaDetaljiComponent,
+    RegistracijaComponent,
 
   ],
   imports: [

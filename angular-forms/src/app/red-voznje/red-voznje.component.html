@@ -2,11 +2,16 @@
   <nav>
       <Table>
           <div class="absolute">
-            <tr *ngFor="let linija of Linije"><td><a (click)="toggleEditor('linijeDetalji')"><h2>{{linija}}</h2></a></td></tr>
+            <tr *ngFor="let linija of Linije">
+              <td><a (click)="prikazDetaljaLinije(linija)"><h2>{{linija}}</h2></a>
+              </td>
+            </tr>
           </div>
       </Table>
   </nav>
   
 
-  
-  <app-linija-detalji *ngIf="linijeDetalji"></app-linija-detalji>
+  <div *ngFor="let l of lin">
+    <app-linija-detalji nazivLinije={{parentNazivLinije}} *ngIf="prikaziDetalje"></app-linija-detalji>
+
+  <div>

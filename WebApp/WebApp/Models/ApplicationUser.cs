@@ -14,6 +14,25 @@ namespace WebApp.Models
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
     {
+
+
+        public string Ime { get; set; }
+
+
+        public string Prezime { get; set; }
+
+
+        public string DatumRodjenja { get; set; }
+
+
+        public string Adresa { get; set; }
+
+
+        public string Mail { get; set; }
+
+
+        public string Lozinka { get; set; }
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager, string authenticationType)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType

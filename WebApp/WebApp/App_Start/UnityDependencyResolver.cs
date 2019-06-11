@@ -73,6 +73,7 @@ namespace WebApp.App_Start
             container.RegisterType<IKupovinaKarteRepository, KupovinaKarteRepository>();
             container.RegisterType<ILinijeRepository, LinijeRepository>();
             container.RegisterType<IStaniceRepository, StaniceRepository>();
+            container.RegisterType<IApplicationUserRepository, ApplicationUserRepository>();
             container.RegisterType<IUnitOfWork, DemoUnitOfWork>();
 
         }

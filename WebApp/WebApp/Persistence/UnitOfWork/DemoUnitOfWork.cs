@@ -20,6 +20,8 @@ namespace WebApp.Persistence.UnitOfWork
         public IStaniceRepository Stanice { get; set; }
         [Dependency]
         public ILinijeRepository Linije { get; set; }
+        [Dependency]
+        public IApplicationUserRepository Korisnici { get; set; }
 
 
         public DemoUnitOfWork(DbContext context)

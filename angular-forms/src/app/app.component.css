@@ -2,7 +2,21 @@ div.absolute
 {
     position : absolute;
     top: 20px;
-    right: 0;
+    right: 50px;
     width: 120px;
     height: 100px;
 }
+
+
+
+.image
+{
+    height : 55em;
+    width: auto;
+    background-size: 100%;
+    background-image: url('Bus-PNG-Image-Transparent.png');
+    background-position: bottom;
+
+    
+}
+

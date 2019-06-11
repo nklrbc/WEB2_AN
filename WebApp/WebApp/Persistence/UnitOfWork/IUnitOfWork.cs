@@ -13,6 +13,7 @@ namespace WebApp.Persistence.UnitOfWork
         IKupovinaKarteRepository KupovinaKarte { get; set; }
         IStaniceRepository Stanice { get; set; }
         ILinijeRepository Linije { get; set; }
+        IApplicationUserRepository Korisnici { get; set; }
         int Complete();
     }
 }

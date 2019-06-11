@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RedVoznjeService } from '../red-voznje.service';
+import { LinijaDetaljiService } from '../linija-detalji.service';
+import { LinijaDetalji } from '../linijeDetalji';
 
 export type EditorType = 'linijaDetalji'
 
@@ -12,7 +14,14 @@ export class RedVoznjeComponent  {
 
   Linije : string[];
 
-  constructor(private redVoznjeService: RedVoznjeService) { }
+  prikaziDetalje : boolean = false;
+  parentLinijaDetalji : LinijaDetalji;
+
+  parentNazivLinije : string;
+
+  lin = []
+
+  constructor(private redVoznjeService: RedVoznjeService, private linijeDetaljiService: LinijaDetaljiService) { }
 
   ngOnInit() {
     this.getLinije();
@@ -31,5 +40,15 @@ export class RedVoznjeComponent  {
 
   toggleEditor(type: EditorType) {
     this.editor = type;
+  }
+
+  prikazDetaljaLinije(linija: string) {
+    this.prikaziDetalje = true;
+    this.parentNazivLinije = linija;
+    this.lin[0] = linija
+    // this.linijeDetaljiService.getDetaljiMock(linija).subscribe(res => {
+    //   console.log(res);
+    //   this.parentLinijaDetalji = res;
+    // });
   }
 }
