@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -42,11 +44,23 @@ namespace WebApp.Controllers
                 Adresa = korisnik.Adresa,
                 Mail = korisnik.Mail,
                 Lozinka = korisnik.Lozinka,
-                DatumRodjenja = korisnik.DatumRodjenja
+                DatumRodjenja = korisnik.DatumRodjenja,
+                Id = korisnik.Ime,
+                UserName = korisnik.Mail,
+                Email = korisnik.Mail,
+                PasswordHash = ApplicationUser.HashPassword(korisnik.Lozinka)
             };
 
-            _unitOfWork.Korisnici.Add(au);
-             _unitOfWork.Complete();
+             var userStore = new UserStore<ApplicationUser>(_context);
+            var userManager = new UserManager<ApplicationUser>(userStore);
+
+           
+            userManager.Create(au);
+            userManager.AddToRole(au.Id, "AppUser");
+           
+
+            //_unitOfWork.Korisnici.Add(au);
+            //_unitOfWork.Complete();
 
 
              return Ok();

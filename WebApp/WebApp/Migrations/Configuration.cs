@@ -83,8 +83,8 @@ namespace WebApp.Migrations
 
             var godisnja = new ArhivaCenovnika() { Id = 3, From = DateTime.Now, To = new DateTime(2019, 7, 5, 12, 0, 0), Tip = TipKarte.Godisnja, Cena = 12000 };
             context.ArhivaCenovnikas.Add(godisnja);
-            context.SaveChanges();
-            */
+            context.SaveChanges();*/
+
 
             /*List<string> vremena1 = new List<string>();
             vremena1.Add("8:40");
@@ -93,7 +93,7 @@ namespace WebApp.Migrations
             vremena1.Add("13:50");
             vremena1.Add("14:30");
             vremena1.Add("15:50");
-            var linija1 = new Linija(2, "Trojka", vremena1);
+            var linija1 = new Linija(1, "Jedinica", vremena1);
 
             var stanica1 = new Stanica(0, "Zeleznica stanica");
             var stanica2 = new Stanica(1, "Safarikova");
@@ -116,7 +116,8 @@ namespace WebApp.Migrations
             linija1.Stanice.Add(stanica5);
             linija1.Stanice.Add(stanica6);
 
-
+            context.Stanicas.Add(stanica1);
+            context.Stanicas.Add(stanica2);
             context.Stanicas.Add(stanica3);
             context.Stanicas.Add(stanica4);
             context.Stanicas.Add(stanica5);
@@ -124,6 +125,41 @@ namespace WebApp.Migrations
 
             context.Linijas.Add(linija1);
 
+            context.SaveChanges();*/
+
+            /*List<string> vremena1 = new List<string>();
+
+            vremena1.Add("8:45");
+            vremena1.Add("9:55");
+            vremena1.Add("12:05");
+            vremena1.Add("13:55");
+            vremena1.Add("14:35");
+            vremena1.Add("15:55");
+            var linija1 = new Linija(3, "Trojka", vremena1);
+
+            var stanica1 = new Stanica(0, "Zeleznica stanica");
+            var stanica2 = new Stanica(1, "Safarikova");
+            var stanica3 = new Stanica(2, "Centar");
+            var stanica4 = new Stanica(3, "Univerzitet");
+            var stanica5 = new Stanica(4, "Kej"); 
+
+            stanica1.Linije.Add(linija1);
+            stanica2.Linije.Add(linija1);
+            stanica3.Linije.Add(linija1);
+            stanica4.Linije.Add(linija1);
+            stanica5.Linije.Add(linija1);
+
+            linija1.Stanice.Add(stanica1);
+            linija1.Stanice.Add(stanica2);
+            linija1.Stanice.Add(stanica3);
+            linija1.Stanice.Add(stanica4);
+            linija1.Stanice.Add(stanica5);
+
+            context.Stanicas.Add(stanica1);
+            context.Stanicas.Add(stanica2);
+            context.Stanicas.Add(stanica3);
+            context.Stanicas.Add(stanica4);
+            context.Stanicas.Add(stanica5);
 
             context.Linijas.Add(linija1);
 
