@@ -11,7 +11,7 @@ export class LinijaDetaljiComponent implements OnInit {
 
   @Input() nazivLinije : string;
 
-  linijaDetalji : LinijaDetalji = new LinijaDetalji()
+  linijaDetalji : LinijaDetalji
 
 
   constructor(private linijeDetalji: LinijaDetaljiService) { }
@@ -22,8 +22,8 @@ export class LinijaDetaljiComponent implements OnInit {
   }
 
   getLinijeDetalji(): void {
-    this.linijeDetalji.getDetaljiMock(this.nazivLinije)
-    .subscribe(linijaDetalji => this.linijaDetalji = linijaDetalji);
+    this.linijeDetalji.getDetalji(this.nazivLinije)
+    .subscribe( linijaDetalji => this.linijaDetalji = linijaDetalji);
   }
 
   

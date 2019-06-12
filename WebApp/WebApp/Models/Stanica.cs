@@ -20,5 +20,10 @@ namespace WebApp.Models
             this.Id = _id;
             this.NazivStanice = _nazivStanice;
         }
+
+        public Stanica()
+        {
+                
+        }
     }
 }

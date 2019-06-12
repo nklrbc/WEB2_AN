@@ -1,27 +1,27 @@
-<!-- <div class="absolute">
+ <div class="absolute">
   <Table border="1">
-      <tr><td colspan="0">{{nazivLinije}}</td>
-      <tr><td colspan="0"></td></tr>
-      <tr ><td *ngFor="let ArhivaCenovnika of ArhivaCenovnikas">{{ArhivaCenovnika.Tip}}</td></tr>
-  </Table>
-</div> -->
-
-<Table>
-  <tr>
-    <td>
-        {{linijaDetalji.NazivLinije}}
-    </td>
-  </tr>
-  <tr *ngFor="let stanica of linijaDetalji.Stanice">
-      <td>{{ stanica}}
+    <tr>
+      <td colspan="10" >
+          <h2>{{linijaDetalji.NazivLinije}}</h2>
       </td>
     </tr>
-
-      <tr *ngFor="let vreme of linijaDetalji.VremenaDolaska">
-        <td>{{ vreme}}
+    <tr>
+        <td *ngFor="let stanica of linijaDetalji.Stanice">
+            <h3>{{stanica}}</h3>
         </td>
-      </tr>
-    
- 
-</Table>
+    </tr>
+  
+    <tr *ngFor="let vreme of linijaDetalji.VremenaDolaska">
+          <td>
+            {{vreme}}
+          </td>
+    </tr>
+      
+  </Table>
 
+</div>
+
+
+<!-- <tr><td colspan="0">{{nazivLinije}}</td>
+  <tr><td colspan="0"></td></tr>
+  <tr ><td *ngFor="let ArhivaCenovnika of ArhivaCenovnikas">{{ArhivaCenovnika.Tip}}</td></tr> -->

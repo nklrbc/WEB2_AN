@@ -12,5 +12,10 @@ namespace WebApp.Persistence.Repository
         public LinijeRepository(DbContext context) : base(context)
         {
         }
+
+        public new IEnumerable<Linija> GetAll()
+        {
+            return context.Set<Linija>().Include("Stanice").ToList();
+        }
     }
 }

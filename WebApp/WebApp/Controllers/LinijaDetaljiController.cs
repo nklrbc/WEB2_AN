@@ -26,8 +26,11 @@ namespace WebApp.Controllers
 
         // GET: api/LinijaDetalji/Detalji/{nazivlinije}
         [HttpGet]
-        public LinijeDetaljiBindingModel GetDetalji([FromUri]string nazivLinije)
+        public LinijeDetaljiBindingModel GetDetalji(string nazivLinije)
         {
+
+            //string nazivLinije = "";
+
             LinijeDetaljiBindingModel ldbm = new LinijeDetaljiBindingModel();
             List<string> stanice = new List<string>();
             List<string> vremenaPolazaka = new List<string>();
@@ -47,8 +50,8 @@ namespace WebApp.Controllers
             }
 
             ldbm.NazivLinije = nazivLinije;
-            ldbm.SveStanice = stanice;
-            ldbm.SvaVremenaPolaska = vremenaPolazaka;
+            ldbm.Stanice = stanice;
+            ldbm.VremenaDolaska = vremenaPolazaka;
 
             return ldbm;
         }

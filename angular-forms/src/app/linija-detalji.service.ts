@@ -17,17 +17,16 @@ export class LinijaDetaljiService {
   }
 
   getDetalji (nazivLinije : string): Observable<LinijaDetalji> {
-    return this.http.get<LinijaDetalji>(`${this.redVoznjeUrl}/${nazivLinije}`)  // this.redVoznjeUrl + '/' + nazivLinije
+    return this.http.get<LinijaDetalji>(this.redVoznjeUrl + "?nazivLinije=" + nazivLinije)  // this.redVoznjeUrl + '/' + nazivLinije
       .pipe(
         catchError(this.handleError<LinijaDetalji>('getDetalji', ))
       );
   }
 
   getDetaljiMock(nazivLinije: string): Observable<LinijaDetalji> {
-    let linijaDetalji = new LinijaDetalji();
-    linijaDetalji.NazivLinije = nazivLinije;
-    linijaDetalji.Stanice = ['12', '2', '55'];
-    linijaDetalji.VremenaDolaska = ['1', '6'];
+    let linijaDetalji = new LinijaDetalji(['Zeleznica stanica', 'Centar', 'Kej'], 
+    ['8:50', '9:30', '10:23', '12:22', '15:10', '18:00'], nazivLinije);
+
 
     return of(linijaDetalji);
   }
