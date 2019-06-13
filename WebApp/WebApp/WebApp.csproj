@@ -255,6 +255,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KupovinakarteController.cs" />
     <Compile Include="Controllers\LinijaDetaljiController.cs" />
+    <Compile Include="Controllers\MenjajCenovnikController.cs" />
+    <Compile Include="Controllers\ObrisiLinijeController.cs" />
     <Compile Include="Controllers\RedVoznjeController.cs" />
     <Compile Include="Controllers\RegistracijaController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />

@@ -3,19 +3,23 @@
 
 
   <nav>
+    <a (click)="toggleEditor('redVoznje')"><h3>Red voznje</h3></a>
     <br>
-    <a (click)="toggleEditor('redVoznje')"><h2>Red voznje</h2></a>
+    <a (click)="toggleEditor('dodavanjeLinije')"><h3>Dodaj liniju</h3></a>
     <br>
-    <a (click)="toggleEditor('cenovnik')"><h2>Cenovnik</h2></a>
+    <a (click)="toggleEditor('brisanjeLinije')"><h3>Obrisi liniju</h3></a>
     <br>
-    <a (click)="toggleEditor('kupovinaKarte')"><h2>Kupi kartu</h2></a>
+    <a (click)="toggleEditor('cenovnik')"><h3>Cenovnik</h3></a>
     <br>
-    <a (click)="toggleEditor('dodavanjeLinije')"><h2>Dodaj liniju</h2></a>
+    <a (click)="toggleEditor('menjajCenovnik')"><h3>Menjaj cenovnik</h3></a>
+    <br>
+    <a (click)="toggleEditor('kupovinaKarte')"><h3>Kupi kartu</h3></a>
+ 
   
     <div class="absolute">
-      <a (click)="toggleEditor('login')"><h2>Prijava</h2></a>
+      <a (click)="toggleEditor('login')"><h3>Prijava</h3></a>
       <br>
-      <a (click)="toggleEditor('registracija')"><h2>Registracija</h2></a>
+      <a (click)="toggleEditor('registracija')"><h3>Registracija</h3></a>
     </div>
   
   
@@ -33,11 +37,15 @@
   <app-registracija *ngIf="showRegistracija"></app-registracija>
 
   <app-dodavanje-linije *ngIf="showDodavanjeLinije"></app-dodavanje-linije>
-  
-  <br>
-  <br>
-  
 
+  <app-menjaj-cenovnik *ngIf="showMenjajCenovnik"></app-menjaj-cenovnik>
+
+  <app-brisanje-linije *ngIf="showBrisanjeLinije"></app-brisanje-linije>
+  
+  <br>
+  <br>
+  
+  
   <div class="image"></div>
 
 

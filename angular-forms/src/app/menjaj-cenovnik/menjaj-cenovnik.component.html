@@ -1,0 +1,29 @@
+<div class="absolute">
+
+
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+       <label>
+         Tip karte:
+         <input type="text" formControlName="NazivTipa" required>
+       </label>
+     
+       <br>
+       <br>
+
+       <label>
+        Cena:
+        <input type="text" formControlName="Cena" required>
+      </label>
+
+      <br>
+      <br>
+
+       <button type="submit" >Promeni cenovnik</button>
+
+   </form>    
+
+
+     
+</div>
+
+  <Label>{{daLiJePoslata}}</Label>

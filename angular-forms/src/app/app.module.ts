@@ -11,6 +11,8 @@ import { KupovinaKarteComponent } from './kupovina-karte/kupovina-karte.componen
 import { LinijaDetaljiComponent } from './linija-detalji/linija-detalji.component';
 import { RegistracijaComponent } from './registracija/registracija.component';
 import { DodavanjeLinijeComponent } from './dodavanje-linije/dodavanje-linije.component';
+import { MenjajCenovnikComponent } from './menjaj-cenovnik/menjaj-cenovnik.component';
+import { BrisanjeLinijeComponent } from './brisanje-linije/brisanje-linije.component';
 
 
 @NgModule({
@@ -23,6 +25,8 @@ import { DodavanjeLinijeComponent } from './dodavanje-linije/dodavanje-linije.co
     LinijaDetaljiComponent,
     RegistracijaComponent,
     DodavanjeLinijeComponent,
+    MenjajCenovnikComponent,
+    BrisanjeLinijeComponent,
 
   ],
   imports: [
