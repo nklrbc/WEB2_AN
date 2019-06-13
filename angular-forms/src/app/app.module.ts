@@ -10,6 +10,7 @@ import { CenovnikComponent } from './cenovnik/cenovnik.component';
 import { KupovinaKarteComponent } from './kupovina-karte/kupovina-karte.component';
 import { LinijaDetaljiComponent } from './linija-detalji/linija-detalji.component';
 import { RegistracijaComponent } from './registracija/registracija.component';
+import { DodavanjeLinijeComponent } from './dodavanje-linije/dodavanje-linije.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { RegistracijaComponent } from './registracija/registracija.component';
     KupovinaKarteComponent,
     LinijaDetaljiComponent,
     RegistracijaComponent,
+    DodavanjeLinijeComponent,
 
   ],
   imports: [

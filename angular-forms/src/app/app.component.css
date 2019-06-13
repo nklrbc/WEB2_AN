@@ -11,12 +11,14 @@ div.absolute
 
 .image
 {
-    height : 55em;
+    height : 37em;
     width: auto;
     background-size: 100%;
     background-image: url('Bus-PNG-Image-Transparent.png');
     background-position: bottom;
-
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     
 }
 

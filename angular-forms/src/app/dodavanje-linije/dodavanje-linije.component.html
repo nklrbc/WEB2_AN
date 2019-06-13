@@ -1,0 +1,23 @@
+<div class="absolute">
+
+
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+       <label>
+         Naziv linije:
+         <input type="text" formControlName="NazivLinije" required>
+       </label>
+     
+       <br>
+       <br>
+
+       <button type="submit" >Dodaj liniju</button>
+
+   </form>    
+
+
+     
+</div>
+<br>
+<br>
+
+  <Label>{{daLiJePoslata}}</Label>

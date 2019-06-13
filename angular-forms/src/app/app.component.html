@@ -9,6 +9,8 @@
     <a (click)="toggleEditor('cenovnik')"><h2>Cenovnik</h2></a>
     <br>
     <a (click)="toggleEditor('kupovinaKarte')"><h2>Kupi kartu</h2></a>
+    <br>
+    <a (click)="toggleEditor('dodavanjeLinije')"><h2>Dodaj liniju</h2></a>
   
     <div class="absolute">
       <a (click)="toggleEditor('login')"><h2>Prijava</h2></a>
@@ -29,6 +31,8 @@
   <app-kupovina-karte *ngIf="showKupovina"></app-kupovina-karte>
 
   <app-registracija *ngIf="showRegistracija"></app-registracija>
+
+  <app-dodavanje-linije *ngIf="showDodavanjeLinije"></app-dodavanje-linije>
   
   <br>
   <br>

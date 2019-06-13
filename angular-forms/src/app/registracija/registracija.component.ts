@@ -24,7 +24,7 @@ export class RegistracijaComponent  {
 
 
   constructor(private fb : FormBuilder, private registracijaService: RegistracijaService) { }
-
+  private daLiJePoslata = "Registracija u toku";
 
   onSubmit()
   {
@@ -38,10 +38,7 @@ export class RegistracijaComponent  {
 
     console.log(korisnik)
     this.registracijaService.addKorisnik(korisnik).subscribe(
-      () => console.log("Uspesno registrovan"),
-      err => {
-        console.log("Puklo")
-      }
+      () => this.daLiJePoslata = "Korisnik registrovan"
       
     );
   }

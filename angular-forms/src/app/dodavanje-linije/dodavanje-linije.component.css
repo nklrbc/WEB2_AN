@@ -1,0 +1,8 @@
+div.absolute
+{
+    position : absolute;
+    top: 180px;
+    right: 950px;
+    width: 120px;
+    height: 100px;
+}
